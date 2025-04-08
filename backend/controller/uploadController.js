@@ -37,8 +37,8 @@ export const DownloadController = async(req,res)=>{
         if(!file){
             return res.status(404).json({message:"File not found"});
         }
-        const filePath = path.resolve(file.path);
-        res.download(filePath,file.name);
+        res.download(file.path,file.name);
+
 
     }catch(error){
         return res.status(500).json({message:error.message});

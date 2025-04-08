@@ -8,7 +8,7 @@ import path from "path";
 const app = express();
 dotenv.config();
 
-const PORT = 9000;
+const PORT = process.env.PORT;
 app.use(cors());
 app.use('/',router);
 
